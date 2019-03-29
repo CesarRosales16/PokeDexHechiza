@@ -7,7 +7,9 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
+import com.bumptech.glide.Glide
 import com.example.pokeinfo.models.Pokemon
 import kotlinx.android.synthetic.main.list_element_pokemon.view.*
 import com.example.pokeinfo.utilities.AppConstants
@@ -35,10 +37,12 @@ class PokemonAdapter(val items: List<Pokemon>, var context: Context) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(items[position])
+        Glide.with(context).load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+(items[position]).id.toString()+".png").into(holder.imgPoke)
     }
 
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        lateinit var imgPoke: ImageView
 
         /*init{
             view.setOnClickListener {
@@ -52,6 +56,7 @@ class PokemonAdapter(val items: List<Pokemon>, var context: Context) :
         fun bind(item: Pokemon) = with(itemView) {
             tv_pokemon_id.text = item.id.toString()
             tv_pokemon_name.text = item.name
+            imgPoke = img_pokemon
             //tv_pokemon_type.text = item.type
         }
     }

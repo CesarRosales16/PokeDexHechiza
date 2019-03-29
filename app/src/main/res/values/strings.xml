@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">PokeInfo</string>
     <string name="text_pokedex">PokeDex</string>
+    <string name="text_weight">Weight:</string>
+    <string name="text_height">Height:</string>
+    <string name="text_experience_needed">Experience needed:</string>
 </resources>

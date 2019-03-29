@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
 
         override fun doInBackground(vararg pokemonNumbers: String?): String {
 
-            val pokeAPI = NetworkUtils.buildUrl("pokemon?offset=0&limit=200")
+            val pokeAPI = NetworkUtils.buildUrl("pokemon?offset=0&limit=200",null)
 
             return try {
                 NetworkUtils.getResponseFromHttpUrl(pokeAPI)!!

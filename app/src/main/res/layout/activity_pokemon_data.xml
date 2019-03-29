@@ -3,19 +3,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/small_gap"
     tools:context=".PokemonDataActivity">
+
+    <ImageView
+        android:id="@+id/img_ind_pokemon"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:layout_marginBottom="@dimen/small_gap" />
 
     <TextView
         android:id="@+id/tv_ind_pokemon_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0."
-        android:textSize="50sp"/>
+        android:layout_marginBottom="@dimen/small_gap"
+        android:text=""
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/extra_big_size" />
+
     <TextView
         android:id="@+id/tv_ind_pokemon_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="hola mundo"
-        android:textSize="50sp"/>
+        android:text=""
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/extra_big_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="@dimen/small_gap"
+        android:text="@string/text_weight"
+        android:textSize="@dimen/medium_size" />
+
+    <TextView
+        android:id="@+id/tv_ind_pokemon_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginBottom="@dimen/small_gap"
+        android:text=""
+        android:textSize="@dimen/medium_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="@dimen/small_gap"
+        android:text="@string/text_height"
+        android:textSize="@dimen/medium_size" />
+
+    <TextView
+        android:id="@+id/tv_ind_pokemon_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginBottom="@dimen/small_gap"
+        android:text=""
+        android:textSize="@dimen/medium_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="@dimen/small_gap"
+        android:text="@string/text_experience_needed"
+        android:textSize="@dimen/medium_size" />
+
+    <TextView
+        android:id="@+id/tv_ind_pokemon_xp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginBottom="@dimen/small_gap"
+        android:text=""
+        android:textSize="@dimen/medium_size" />
 
 </LinearLayout>
